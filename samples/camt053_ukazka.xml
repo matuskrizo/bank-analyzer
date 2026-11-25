@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>UKAZKA-2026-11-24</MsgId>
+      <CreDtTm>2026-11-24T18:00:00</CreDtTm>
+    </GrpHdr>
+    <Stmt>
+      <Id>UKAZKA-001</Id>
+      <Acct><Id><IBAN>SK0000000000000000000099</IBAN></Id></Acct>
+      <Ntry>
+        <Amt Ccy="EUR">650.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-24</Dt></BookgDt>
+        <ValDt><Dt>2026-11-24</Dt></ValDt>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>/VS2026011/SS/KS0308</EndToEndId></Refs>
+            <RltdPties>
+              <Cdtr><Nm>Správa bytov Horská s.r.o.</Nm></Cdtr>
+              <CdtrAcct><Id><IBAN>SK0000000000000000000003</IBAN></Id></CdtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>Nájom 12/2026</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">1850.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><DtTm>2026-11-23T09:15:00</DtTm></BookgDt>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>NOTPROVIDED</EndToEndId></Refs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>Fiktívna Firma s.r.o.</Nm></Pty></Dbtr>
+              <DbtrAcct><Id><IBAN>SK0000000000000000000002</IBAN></Id></DbtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>Mzda 11/2026</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">31.20</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-23</Dt></BookgDt>
+        <AddtlNtryInf>Platba kartou LIDL DAKUJEME ZA NAKUP</AddtlNtryInf>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">15.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-22</Dt></BookgDt>
+        <NtryDtls>
+          <TxDtls>
+            <RltdPties>
+              <Dbtr><Nm>Peter Kováč</Nm></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>Pizza</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

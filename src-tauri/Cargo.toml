@@ -1,0 +1,37 @@
+[package]
+name = "bank-analyzer"
+version = "0.1.0"
+description = "Analyzátor bankových výpisov (SLSP / George) – učebný projekt Tauri + Svelte"
+edition = "2024"
+
+# Tauri potrebuje knižnicu (lib) – main.rs ju len zavolá.
+# "staticlib"/"cdylib" sú pre mobilné platformy, "rlib" pre bežný Rust (a testy).
+[lib]
+name = "bank_analyzer_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+
+# Serializácia dát medzi Rustom a JavaScriptom
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Vlastné chybové typy
+thiserror = "2"
+
+# Parsovanie výpisov
+csv = "1.4"
+encoding_rs = "0.8"                                         # Windows-1250 → UTF-8
+quick-xml = { version = "0.42", features = ["serialize"] }  # camt.053 XML cez serde
+chrono = { version = "0.4", features = ["serde"] }
+
+# Lokálna databáza – "bundled" skompiluje SQLite priamo do aplikácie
+rusqlite = { version = "0.43", features = ["bundled"] }
+
+# Hash transakcie na detekciu duplicít
+sha2 = "0.11"
